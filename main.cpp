@@ -1,5 +1,5 @@
 #define GLAD_STATIC
-#include <glad/glad.h>
+#include "glad/glad.h"
 
 #define GLFW_STATIC
 #include <GLFW/glfw3.h>
