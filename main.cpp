@@ -22,22 +22,23 @@ constexpr std::uintptr_t VIEW_ANGLE_BASE{ 0xB33498 };
 
 int main()
 {
-    // std::optional<libmem::Process> getProcess{ libmem::FindProcess(::processName.data()) };
+    std::optional<libmem::Process> optionalProcess{ libmem::FindProcess(::processName.data()) };
 
-    // if (!getProcess.has_value())
-    // {
-    //     std::cerr << "process not found\n";
+    if (!optionalProcess.has_value())
+    {
+        std::cerr << "process not found\n";
 
-    //     return 1;
-    // }
+        return 1;
+    }
 
-    // const libmem::Process process(std::move(getProcess.value()));
+    const libmem::Process process(std::move(optionalProcess.value()));
 
-    // getProcess.reset();
+    optionalProcess.reset();
 
-    // to make code below work
+    // code under saves a little bit of memory to get it to work
     // add Process(){}; in libmem.hpp in Process struct above Process(const struct lm_process_t *process);
-    // otherwise uncomment code above and delete one below
+
+    /*
 
     libmem::Process process{};
 
@@ -53,6 +54,8 @@ int main()
 
         process = std::move(optionalProcess.value());
     }
+
+    */
 
     std::uintptr_t engineModuleBase{};
 
