@@ -91,7 +91,7 @@ int main()
 
     // mouse passthrough not needed for x11
 
-    ::GLFWwindow* window{ ::glfwCreateWindow(75, 50, "window", nullptr, nullptr) };
+    ::GLFWwindow* window{ ::glfwCreateWindow(125, 50, "window", nullptr, nullptr) };
     if (!window)
     {
         std::cerr << "glfw create window failed\n";
@@ -148,10 +148,14 @@ int main()
             break;
         }
 
-        if (yaw == 0.f)
-        {
-            continue;
-        }
+        // uncomment if u dont want to render compass before getting into a game
+
+        // if (yaw == 0.f)
+        // {
+        //     continue;
+        // }
+
+        yaw += 180.f;
 
         ::glfwPollEvents();
 
@@ -159,7 +163,27 @@ int main()
 
         ::gltBeginDraw();
 
-        ::gltSetText(text, std::to_string(static_cast<int>(yaw) + 180).c_str());
+        if (yaw >= 0.f && yaw <= 5.f || yaw >= 355.f && yaw <= 360.f)
+        {
+            ::gltSetText(text, "North");
+        }
+        else if (yaw >= 85.f && yaw <= 95.f)
+        {
+            ::gltSetText(text, "East");
+        }
+        else if (yaw >= 175.f && yaw <= 185.f)
+        {
+            ::gltSetText(text, "South");
+        }
+        else if (yaw >= 265.f && yaw <= 275.f)
+        {
+            ::gltSetText(text, "West");
+        }
+        else
+        {
+            ::gltSetText(text, std::to_string(static_cast<int>(yaw)).c_str());
+        }
+
         ::gltColor(1.f, 1.f, 1.f, 1.f);
         ::gltDrawText2D(text, 0, 0, 2.5f);
 
