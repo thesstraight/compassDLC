@@ -35,8 +35,8 @@ int main()
 
     // getProcess.reset();
 
-    // to make this code work add Process(){};
-    // in libmem.hpp in Process struct above Process(const struct lm_process_t *process);
+    // to make code below work
+    // add Process(){}; in libmem.hpp in Process struct above Process(const struct lm_process_t *process);
     // otherwise uncomment code above and delete one below
 
     libmem::Process process{};
