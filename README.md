@@ -4,7 +4,9 @@ Compass DLC that can apply to any Source Engine made game for linux that is 32 b
 
 ## Showcase
 
-![showcasegif](https://i.ibb.co/mrRwY6x9/showcase.gif)
+the degrees can be seen in the corner
+
+![showcasegif](https://raw.githubusercontent.com/thesstraight/compassDLC/refs/heads/master/showcase.gif)
 
 ## Installation
 
