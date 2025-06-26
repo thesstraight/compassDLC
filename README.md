@@ -4,7 +4,7 @@ Compass DLC that can apply to any Source Engine made game for linux that is 32 b
 
 ## Showcase
 
-gif coming soon
+<img src="https://i.ibb.co/mrRwY6x9/showcase.gif"/>
 
 ## Installation
 
