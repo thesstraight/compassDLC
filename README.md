@@ -1,10 +1,8 @@
 # External Compass DLC for Counter-Strike: Source v92 (6630498) on Linux
 
-Compass DLC that can apply to any Source Engine made game for linux that is 32 bit/i386/i686 if the view angle offset is correct for the given game.
+Application creates a transparent window with floating flag and reads players yaw, then renders text with its value. U can make this work for garry's mod, etc... by changing the view angle offset. Tutorial for finding viewangles in source engine games https://www.youtube.com/watch?v=mS8ZQ5N7Dvk
 
 ## Showcase
-
-the degrees can be seen in the corner
 
 ![showcasegif](https://raw.githubusercontent.com/thesstraight/compassDLC/refs/heads/master/showcase.gif)
 
