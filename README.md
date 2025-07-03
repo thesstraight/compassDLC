@@ -4,7 +4,7 @@ Application creates a transparent window with floating flag and reads players ya
 
 ## Showcase
 
-![showcasegif](https://raw.githubusercontent.com/thesstraight/compassDLC/refs/heads/master/showcase.gif)
+![showcasegif](https://raw.githubusercontent.com/thesstraight/compassDLC/refs/heads/master/media/showcase.gif)
 
 ## Installation
 
